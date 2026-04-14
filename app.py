@@ -6,7 +6,7 @@
 
 import streamlit as st
 import pickle
-import docx
+import python-docx
 import PyPDF2
 import re
 
