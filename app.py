@@ -11,9 +11,11 @@ import PyPDF2
 import re
 
 # Load models
-svc_model = pickle.load(open('clf.pkl', 'rb'))
-tfidf = pickle.load(open('tfidf.pkl', 'rb'))
-le = pickle.load(open('encoder.pkl', 'rb'))
+import joblib
+
+svc_model = joblib.load('clf.pkl')
+tfidf = joblib.load('tfidf.pkl')
+le = joblib.load('encoder.pkl')
 
 # ---------------- CLEAN TEXT ----------------
 def cleanResume(txt):
